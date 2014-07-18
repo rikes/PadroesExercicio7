@@ -1,4 +1,4 @@
 PadroesExercicio7
 =================
 
-Interator and Chainf of Responsability
+Interprete and Chainf of Responsability
