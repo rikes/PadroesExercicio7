@@ -26,7 +26,7 @@ public class App {
         list.add(NomeCidade.ALEGRE);
         list.add(NomeCidade.VITORIA);
         list.add(NomeCidade.VENDANOVA);
-        
+        list.add(NomePosicao.SUL);
         navegarCidade.setNext(list);
         
         

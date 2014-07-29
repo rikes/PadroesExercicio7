@@ -20,7 +20,7 @@ public class CidadeChain {
     protected CidadeChain nextPosicaoCidade;
     protected String comando;
     protected ArrayList<String> cidade;
-    protected ArrayList<Enum> arrayEnum = new ArrayList<>();
+    protected ArrayList<Enum> comandosEnum = new ArrayList<>();
     
     /*public CidadeChain(ArrayList<Enum> arrayEnum){
         Interpretador interpretador = new Interpretador(arrayEnum);
@@ -38,12 +38,12 @@ public class CidadeChain {
         }
     }
 */   
-    public void setNext(ArrayList<Enum> arrayEnum){
-        Interpretador interpretador = new Interpretador(arrayEnum);
+    public void setNext(ArrayList<Enum> comandoEnum){
+        Interpretador interpretador = new Interpretador(comandosEnum);
         this.cidade = interpretador.getCidade();
         this.comando = interpretador.getComando();   
         nextPosicaoCidade = null;
-        this.arrayEnum = arrayEnum;
+        this.comandosEnum = comandoEnum;
         
     }
     public void indicaLocalizacao() {

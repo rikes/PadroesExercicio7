@@ -17,6 +17,8 @@ public class Interpretador {
     ArrayList <String> cidades = new ArrayList<>();
     String comando;
     
+    
+    
     public Interpretador(ArrayList<Enum> arrayEnum){
         this.arrayEnum = arrayEnum;
         int i = arrayEnum.size() - 1 ;
@@ -26,6 +28,12 @@ public class Interpretador {
             cidades.add(arrayEnum.get(j).toString());
         }
     }
+    /*Fazer um for que varra os camandos passados,
+    deve primeiramente verificar qual a direção o mesmo deseja.
+    Após isso percorrer as cidades, ao percorrer as cidades, verificar
+    qual região é esta cidade e retornar o nome dela.
+    */
+    
     
     public ArrayList getCidade() {
         return this.cidades;
