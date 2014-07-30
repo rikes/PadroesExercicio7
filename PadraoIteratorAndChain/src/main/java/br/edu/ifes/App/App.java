@@ -27,22 +27,9 @@ public class App {
         list.add(NomeCidade.ALEGRE);
         list.add(NomeCidade.VITORIA);
         list.add(NomeCidade.VENDANOVA);
-        list.add(NomePosicao.SUL);
+        list.add(NomePosicao.GRANDEVITORIA);
         CidadeChain navegarCidade = new CidadeChain(list);
         navegarCidade.setNext();
-        //navegarCidade.setNext(list);
-        
-        
-        //navegarCidade.setNext(NomeCidade.ALEGRE,NomeCidade.CARIACICA, NomePosicao.GRANDEVITORIA);
-        /*System.out.println(NomeCidade.ALEGRE);
-        String s = "ALEGRE";
-        System.out.println(s);
-        if (s.equals(NomeCidade.ALEGRE.toString())){
-            System.out.println("Igual");
-        }
-        */
-        
-               
     }
     
 }

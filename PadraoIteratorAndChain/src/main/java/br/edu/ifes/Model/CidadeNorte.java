@@ -7,7 +7,6 @@
 package br.edu.ifes.Model;
 
 import br.edu.ifes.Util.NomeCidade;
-import br.edu.ifes.Util.NomePosicao;
 import java.util.ArrayList;
 
 /**
@@ -19,13 +18,15 @@ public class CidadeNorte implements Expression{
     
     @Override
     public void indicaLocalizacao(ArrayList<Enum> comandosEnum) {
-            if(comandosEnum.contains(NomeCidade.LINHARES.toString())){
+        for (Enum enum1 : comandosEnum) {
+            if(enum1 == NomeCidade.LINHARES){
                 System.out.println("Linhares");
-            }else if(comandosEnum.contains(NomeCidade.PEDROCANARIO.toString())){
+                break;
+            }else if(enum1 == NomeCidade.PEDROCANARIO){
                 System.out.println("PEDRO CANARIO");
-            }else if(comandosEnum.contains(NomeCidade.SERRA.toString())){
-                System.out.println("SERRA");
+                break;
             }    
+        }    
     }
     
 }

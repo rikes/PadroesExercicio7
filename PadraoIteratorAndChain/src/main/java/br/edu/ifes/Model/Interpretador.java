@@ -39,7 +39,6 @@ public class Interpretador {
                 //comandosEnum.remove(this);
                 return new CidadesSul();
             }
-            //System.out.println("Enum"+comandosEnum1.name());    
         }
 
         return null;

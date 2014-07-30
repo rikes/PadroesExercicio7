@@ -16,19 +16,25 @@ public class CidadeGrandeVitoria implements Expression{
 
     @Override
     public void indicaLocalizacao(ArrayList<Enum> comandosEnum) {
-
-            if(comandosEnum.contains(NomeCidade.CARIACICA.toString())){
+        for (Enum enum1 : comandosEnum) {
+            if(enum1 == NomeCidade.CARIACICA){
                 System.out.println("Cariacica");
-            }else if(comandosEnum.contains(NomeCidade.VITORIA.toString())){
+                break;
+            }else if(enum1 == NomeCidade.VITORIA){
                 System.out.println("Vitória");
-            }else if(comandosEnum.contains(NomeCidade.VILAVELHA.toString())){
+                break;
+            }else if(enum1 == NomeCidade.VILAVELHA){
                 System.out.println("Vila Velha");
-            }else if(comandosEnum.contains(NomeCidade.SERRA.toString())){
+                break;
+            }else if(enum1 == NomeCidade.SERRA){
                 System.out.println("SERRA");
-            }else if(comandosEnum.contains(NomeCidade.GUARAPARI.toString())){
+                break;
+            }else if(enum1 == NomeCidade.GUARAPARI){
                 System.out.println("Guarapari");    
+                break;
             }
-    }
+        }
+    }    
 
     
 }

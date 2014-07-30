@@ -18,11 +18,14 @@ public class CidadeOeste implements Expression{
         
     @Override
     public void indicaLocalizacao(ArrayList<Enum> comandosEnum) {
-
-        if (comandosEnum.contains(NomeCidade.BAIXOGUANDO.toString())) {
-            System.out.println("BAIXO GUANDO");
-        } else if (comandosEnum.contains(NomeCidade.COLATINA.toString())) {
-            System.out.println("Colatina");
+        for (Enum enum1 : comandosEnum) {
+            if (enum1 == NomeCidade.BAIXOGUANDO) {
+                System.out.println("BAIXO GUANDO");
+                break;
+            } else if (enum1 == NomeCidade.COLATINA) {
+                System.out.println("Colatina");
+                break;
+            }
         }
     }
 

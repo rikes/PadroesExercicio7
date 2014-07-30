@@ -23,16 +23,21 @@ public class CidadesSul implements Expression{
     @Override
     public void indicaLocalizacao(ArrayList<Enum> comandosEnum) {
         for (Enum enum1 : comandosEnum) {
-            if (comandosEnum.contains(NomeCidade.CACHOEIROITAPEMIRIM.toString())) {
+            if (enum1 == NomeCidade.CACHOEIROITAPEMIRIM) {
                 System.out.println("CACHOEIRO DO ITAPEMIRIM");
+                break;
             }else if (enum1 == NomeCidade.ALEGRE){
                 System.out.println("ALEGRE!");
-            }else if (comandosEnum.contains(NomeCidade.VENDANOVA.toString())) {
+                break;
+            }else if (enum1 == NomeCidade.VENDANOVA) {
                 System.out.println("VENDA NOVA Do Imigrante");
-            }else if (comandosEnum.contains(NomeCidade.SERRA.toString())) {
+                break;
+            }else if (enum1 == NomeCidade.CASTELO) {
                 System.out.println("CASTELO");
-            }else if (comandosEnum.contains(NomeCidade.PIUMA.toString())) {
+                break;
+            }else if (enum1 == NomeCidade.PIUMA) {
                 System.out.println("PIUMA");
+                break;
             }
         }
        
