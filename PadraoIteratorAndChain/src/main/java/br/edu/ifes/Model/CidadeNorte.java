@@ -14,9 +14,10 @@ import java.util.ArrayList;
  *
  * @author Henrique
  */
-public class CidadeNorte {
+public class CidadeNorte implements Expression{
         
     
+    @Override
     public void indicaLocalizacao(ArrayList<Enum> comandosEnum) {
             if(comandosEnum.contains(NomeCidade.LINHARES.toString())){
                 System.out.println("Linhares");

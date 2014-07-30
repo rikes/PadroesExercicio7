@@ -8,9 +8,7 @@ package br.edu.ifes.Model;
 
 
 
-import br.edu.ifes.Util.NomePosicao;
 import java.util.ArrayList;
-import sun.security.provider.PolicyParser;
 
 
 /**
@@ -22,8 +20,9 @@ public class CidadeChain {
     protected CidadeChain nextPosicaoCidade;
     protected String comando,posicao;
     protected ArrayList<String> cidade;
-    protected ArrayList<Enum> comandosEnum = new ArrayList<>();
+    protected ArrayList<Enum> comandosEnum,AuxEnum;
     Interpretador interpretador = new Interpretador();
+    protected Expression exp;
     
     public CidadeChain(ArrayList<Enum> arrayEnum){
         nextPosicaoCidade = null;
@@ -31,6 +30,12 @@ public class CidadeChain {
     }
     
     public void setNext(){
-        interpretador.localizacao(comandosEnum);
+        exp = interpretador.localizacao(comandosEnum);
+        this.AuxEnum = interpretador.getComando();
+        for (Enum enum1 : AuxEnum) {
+            System.out.println("Nome Cidades+ "+ enum1.name());
+        }
+        exp.indicaLocalizacao(AuxEnum);
+        
     } 
 }

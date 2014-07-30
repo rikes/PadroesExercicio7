@@ -7,14 +7,14 @@
 package br.edu.ifes.Model;
 
 import br.edu.ifes.Util.NomeCidade;
-import br.edu.ifes.Util.NomePosicao;
 import java.util.ArrayList;
 /**
  *
  * @author Henrique
  */
-public class CidadeGrandeVitoria{
+public class CidadeGrandeVitoria implements Expression{
 
+    @Override
     public void indicaLocalizacao(ArrayList<Enum> comandosEnum) {
 
             if(comandosEnum.contains(NomeCidade.CARIACICA.toString())){

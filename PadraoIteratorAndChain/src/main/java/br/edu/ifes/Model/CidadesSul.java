@@ -14,20 +14,28 @@ import java.util.ArrayList;
  *
  * @author Henrique
  */
-public class CidadesSul {
-        public void indicaLocalizacao(ArrayList<Enum> comandosEnum) {
+public class CidadesSul implements Expression{
         
-            if(comandosEnum.contains(NomeCidade.CACHOEIROITAPEMIRIM.toString())){
+    /**
+     *
+     * @param comandosEnum
+     */
+    @Override
+    public void indicaLocalizacao(ArrayList<Enum> comandosEnum) {
+        for (Enum enum1 : comandosEnum) {
+            if (comandosEnum.contains(NomeCidade.CACHOEIROITAPEMIRIM.toString())) {
                 System.out.println("CACHOEIRO DO ITAPEMIRIM");
-            }else if(comandosEnum.contains(NomeCidade.ALEGRE.toString())){
-                System.out.println("ALEGRE");
-            }else if(comandosEnum.contains(NomeCidade.VENDANOVA.toString())){
+            }else if (enum1 == NomeCidade.ALEGRE){
+                System.out.println("ALEGRE!");
+            }else if (comandosEnum.contains(NomeCidade.VENDANOVA.toString())) {
                 System.out.println("VENDA NOVA Do Imigrante");
-            }else if(comandosEnum.contains(NomeCidade.SERRA.toString())){
+            }else if (comandosEnum.contains(NomeCidade.SERRA.toString())) {
                 System.out.println("CASTELO");
-            }else if(comandosEnum.contains(NomeCidade.PIUMA.toString())){
-                System.out.println("PIUMA");    
+            }else if (comandosEnum.contains(NomeCidade.PIUMA.toString())) {
+                System.out.println("PIUMA");
             }
+        }
+       
     }
-    
+
 }

@@ -13,5 +13,5 @@ import java.util.ArrayList;
  * @author Henrique
  */
 public interface Expression {
-    public String indicaLocalizacao();
+    public void indicaLocalizacao(ArrayList<Enum> comandosEnum);
 }

@@ -17,32 +17,37 @@ public class Interpretador {
     //ArrayList<Enum> arrayEnum = new ArrayList<>();
     //ArrayList <String> cidades = new ArrayList<>();
     String comando,posicao;
+    ArrayList<Enum> backup;
 
-    public void localizacao(ArrayList<Enum> comandosEnum) {
+    public Expression localizacao(ArrayList<Enum> comandosEnum) {
+        backup = comandosEnum;
         for (Enum comandosEnum1 : comandosEnum) {
             if (comandosEnum1 == NomePosicao.GRANDEVITORIA) {
                 posicao = NomePosicao.GRANDEVITORIA.name();
-                new CidadeGrandeVitoria().indicaLocalizacao(comandosEnum);
-                break;
-            
+                //comandosEnum.remove(this);
+                return new CidadeGrandeVitoria();
             }else if (comandosEnum1 == NomePosicao.OESTE) {
                 posicao = NomePosicao.OESTE.name();
-                new CidadeOeste().indicaLocalizacao(comandosEnum);
-
-            } else if (comandosEnum1 == NomePosicao.OESTE) {
+                //comandosEnum.remove(this);
+                return new CidadeOeste();
+            } else if (comandosEnum1 == NomePosicao.NORTE) {
                 posicao = NomePosicao.NORTE.name();
-                new CidadeNorte().indicaLocalizacao(comandosEnum);
-
+                //comandosEnum.remove(this);
+                return new CidadeNorte();
             } else if (comandosEnum1 == NomePosicao.SUL) {
                 posicao = NomePosicao.SUL.name();
-                new CidadesSul().indicaLocalizacao(comandosEnum);
+                //comandosEnum.remove(this);
+                return new CidadesSul();
             }
-            System.out.println("Enum"+comandosEnum1.name());    
+            //System.out.println("Enum"+comandosEnum1.name());    
         }
+
+        return null;
     }
 
-    public String getComando() {
-        return this.posicao;
+    public ArrayList getComando() {
+        
+        return this.backup;
     }
     
 }

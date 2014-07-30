@@ -14,14 +14,16 @@ import java.util.ArrayList;
  *
  * @author Henrique
  */
-public class CidadeOeste {
-        public void indicaLocalizacao(ArrayList<Enum> comandosEnum) {
+public class CidadeOeste implements Expression{
+        
+    @Override
+    public void indicaLocalizacao(ArrayList<Enum> comandosEnum) {
 
-            if(comandosEnum.contains(NomeCidade.BAIXOGUANDO.toString())){
-                System.out.println("BAIXO GUANDO");
-            }else if(comandosEnum.contains(NomeCidade.COLATINA.toString())){
-                System.out.println("Colatina");
-            }    
+        if (comandosEnum.contains(NomeCidade.BAIXOGUANDO.toString())) {
+            System.out.println("BAIXO GUANDO");
+        } else if (comandosEnum.contains(NomeCidade.COLATINA.toString())) {
+            System.out.println("Colatina");
+        }
     }
-    
+
 }

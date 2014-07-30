@@ -7,6 +7,7 @@
 package br.edu.ifes.App;
 
 import br.edu.ifes.Model.CidadeChain;
+import br.edu.ifes.Model.Interpretador;
 import br.edu.ifes.Util.NomeCidade;
 import br.edu.ifes.Util.NomePosicao;
 import java.util.ArrayList;
@@ -28,6 +29,7 @@ public class App {
         list.add(NomeCidade.VENDANOVA);
         list.add(NomePosicao.SUL);
         CidadeChain navegarCidade = new CidadeChain(list);
+        navegarCidade.setNext();
         //navegarCidade.setNext(list);
         
         
