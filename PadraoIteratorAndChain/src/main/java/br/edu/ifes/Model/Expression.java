@@ -13,6 +13,5 @@ import java.util.ArrayList;
  * @author Henrique
  */
 public interface Expression {
-    
     public String indicaLocalizacao();
 }

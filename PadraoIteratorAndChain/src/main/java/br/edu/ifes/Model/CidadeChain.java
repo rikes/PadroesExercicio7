@@ -8,7 +8,9 @@ package br.edu.ifes.Model;
 
 
 
+import br.edu.ifes.Util.NomePosicao;
 import java.util.ArrayList;
+import sun.security.provider.PolicyParser;
 
 
 /**
@@ -18,35 +20,17 @@ import java.util.ArrayList;
 public class CidadeChain {
     
     protected CidadeChain nextPosicaoCidade;
-    protected String comando;
+    protected String comando,posicao;
     protected ArrayList<String> cidade;
     protected ArrayList<Enum> comandosEnum = new ArrayList<>();
+    Interpretador interpretador = new Interpretador();
     
-    /*public CidadeChain(ArrayList<Enum> arrayEnum){
-        Interpretador interpretador = new Interpretador(arrayEnum);
-        this.cidade = interpretador.getCidade();
-        this.comando = interpretador.getComando();   
+    public CidadeChain(ArrayList<Enum> arrayEnum){
         nextPosicaoCidade = null;
-        this.arrayEnum = arrayEnum;
+        this.comandosEnum = arrayEnum;
     }
-*/    
-    /*public void setNext(CidadeChain localiza){
-        if(nextPosicaoCidade == null){
-            nextPosicaoCidade = localiza;
-        }else{
-            nextPosicaoCidade.setNext(localiza);
-        }
-    }
-*/   
-    public void setNext(ArrayList<Enum> comandoEnum){
-        Interpretador interpretador = new Interpretador(comandosEnum);
-        this.cidade = interpretador.getCidade();
-        this.comando = interpretador.getComando();   
-        nextPosicaoCidade = null;
-        this.comandosEnum = comandoEnum;
-        
-    }
-    public void indicaLocalizacao() {
-        
+    
+    public void setNext(){
+        interpretador.localizacao(comandosEnum);
     } 
 }

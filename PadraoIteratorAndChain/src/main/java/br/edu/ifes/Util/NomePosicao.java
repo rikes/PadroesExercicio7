@@ -11,5 +11,5 @@ package br.edu.ifes.Util;
  * @author Henrique
  */
 public enum NomePosicao {
-    NORTE,SUL,LESTE,OESTE,GRANDEVITORIA;
+    NORTE,SUL,OESTE,GRANDEVITORIA;
 }

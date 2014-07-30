@@ -8,29 +8,26 @@ package br.edu.ifes.Model;
 
 import br.edu.ifes.Util.NomeCidade;
 import br.edu.ifes.Util.NomePosicao;
+import java.util.ArrayList;
 /**
  *
  * @author Henrique
  */
-public class CidadeGrandeVitoria extends CidadeChain{
+public class CidadeGrandeVitoria{
 
-    @Override
-    public void indicaLocalizacao() {
-        
-        if(comando.equals(NomePosicao.GRANDEVITORIA.toString())){
-            if(cidade.contains(NomeCidade.CARIACICA.toString())){
+    public void indicaLocalizacao(ArrayList<Enum> comandosEnum) {
+
+            if(comandosEnum.contains(NomeCidade.CARIACICA.toString())){
                 System.out.println("Cariacica");
-            }else if(cidade.contains(NomeCidade.VITORIA.toString())){
+            }else if(comandosEnum.contains(NomeCidade.VITORIA.toString())){
                 System.out.println("Vitória");
-            }else if(cidade.contains(NomeCidade.VILAVELHA.toString())){
+            }else if(comandosEnum.contains(NomeCidade.VILAVELHA.toString())){
                 System.out.println("Vila Velha");
-            }else if(cidade.contains(NomeCidade.SERRA.toString())){
+            }else if(comandosEnum.contains(NomeCidade.SERRA.toString())){
                 System.out.println("SERRA");
-            }else if(cidade.contains(NomeCidade.GUARAPARI.toString())){
+            }else if(comandosEnum.contains(NomeCidade.GUARAPARI.toString())){
                 System.out.println("Guarapari");    
-            }   
-        }
-        System.out.println("Passa o comando para o proximo da Lista");
+            }
     }
 
     

@@ -21,13 +21,14 @@ public class App {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        CidadeChain navegarCidade = new CidadeChain();
+        
         ArrayList<Enum> list = new ArrayList<>();
         list.add(NomeCidade.ALEGRE);
         list.add(NomeCidade.VITORIA);
         list.add(NomeCidade.VENDANOVA);
         list.add(NomePosicao.SUL);
-        navegarCidade.setNext(list);
+        CidadeChain navegarCidade = new CidadeChain(list);
+        //navegarCidade.setNext(list);
         
         
         //navegarCidade.setNext(NomeCidade.ALEGRE,NomeCidade.CARIACICA, NomePosicao.GRANDEVITORIA);
